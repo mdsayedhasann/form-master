@@ -1,11 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+/* eslint-disable no-undef */
 import "./App.css";
-import SimpleForm from "./components/SimpleForm/SimpleForm";
-import StatefulForm from "./components/StatefulForm/StatefulForm";
-import RefForm from "./components/RefForm/RefForm";
+import AnotherForm from "./components/AnotherForm/AnotherForm";
+import GrandFather from "./components/GrandFather/GrandFather";
 import ReusableForm from "./components/ReusableForm/ReusableForm";
+import TestReusableForm from "./components/TestReusableForm/TestReusableForm";
 
 function App() {
   const handleSignUpSubmit = (data) => {
@@ -16,16 +14,31 @@ function App() {
     console.log("Updated Data", data);
   };
 
+  const testForm = (data) => {
+    console.log("Sign Up Form", data);
+  };
+
+  const testUpdateForm = (data) => {
+    console.log("Update", data);
+  };
+
+  const anotherFormSignUp = data => {
+    console.log('Signup form', data);
+  }
+
+  const anotherFormUpdate = data => {
+    console.log('Another form update' , data);
+  }
+
   return (
     <>
-      <h1> React</h1>
       {/* <SimpleForm></SimpleForm> */}
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
-      <ReusableForm
-        formTitle={`Sign Up`}
-        handleForm={handleSignUpSubmit}
-      >
+
+
+
+      {/* <ReusableForm formTitle={`Sign Up`} handleForm={handleSignUpSubmit}>
         <h2>Sign Up Form</h2>
       </ReusableForm>
       <ReusableForm
@@ -34,7 +47,39 @@ function App() {
         handleForm={handleUpdate}
       >
         <h2>Update Form</h2>
-      </ReusableForm>
+      </ReusableForm> */}
+
+
+
+
+
+      {/* <TestReusableForm handleForm={testForm}>
+        <h2>Sign Up Form</h2>
+        <p>Here is the sign up form for visiting National zoo</p>
+      </TestReusableForm>
+
+      <TestReusableForm handleForm={testUpdateForm} handleSubmit={"Update"}>
+        <h2>Update Form</h2>
+        <p>You can update details if any mistaken are happened</p>
+      </TestReusableForm> */}
+
+
+
+
+      {/* <AnotherForm handleFormData={anotherFormSignUp} submitButton='SignUp'>
+        <h2>Sign Up</h2>
+        <p>Please Signup from the below form</p>
+      </AnotherForm>
+
+
+      <AnotherForm handleFormData={anotherFormUpdate} submitButton='Update'>
+        <h2>Update</h2>
+        <p>If any issue happened, please update quickly</p>
+      </AnotherForm> */}
+
+
+      <GrandFather></GrandFather>
+
     </>
   );
 }

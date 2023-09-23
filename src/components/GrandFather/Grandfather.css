@@ -1,0 +1,9 @@
+div{
+    border: 2px solid tan;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 25px;
+}
+.flex{
+    display: flex;
+}
